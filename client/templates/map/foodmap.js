@@ -27,7 +27,7 @@ Template.foodmap.helpers({
     if (GoogleMaps.loaded()) {
       // Map initialization options
       return {
-        center: new google.maps.LatLng(-37.831009, 145.053919),
+        center: new google.maps.LatLng(-37.831097, 145.054197),
         zoom: 16
       };
     }
