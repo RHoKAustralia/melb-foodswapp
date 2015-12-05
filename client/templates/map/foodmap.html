@@ -1,7 +1,12 @@
 <template name="foodmap">
     <body>
-      <div class="map-container">
-        {{> googleMap name="foodMap" options=foodMapOptions}}
-      </div>
+        <div class="container">
+            <div id="main">
+                <div class="map-container">
+                    {{> googleMap name="foodMap" options=foodMapOptions}}
+                </div>
+            </div>
+        </div>
+        {{> header}}
     </body>
 </template>

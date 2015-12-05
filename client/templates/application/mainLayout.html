@@ -1,12 +1,10 @@
 <template name="mainLayout">
     <body>
-        
+        {{> header}}
         <div class="container">
             <div id="main">
                 {{> Template.dynamic template=content}}
             </div>
         </div>
-        {{> header}}
-        {{> footer}}
     </body>
 </template>
