@@ -22,3 +22,6 @@ twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
 dburles:google-maps
+ian:accounts-ui-bootstrap-3
+accounts-base
+accounts-password
