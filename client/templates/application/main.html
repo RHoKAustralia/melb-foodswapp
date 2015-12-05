@@ -1,9 +1,9 @@
-<template name="mainLayout">
+<template name="main">
   <body>
     {{> header}}
     <div class="container">
       <div id="main">
-        {{> Template.dynamic template=content}}
+        {{> Template.dynamic template=content data=extra}}
       </div>
     </div>
   </body>
