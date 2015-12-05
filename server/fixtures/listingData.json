@@ -1,0 +1,10 @@
+{
+    creatorId: sueId,
+    title: 'Buy my veggies', // change this
+    image: 'http://lorempixel.com/400/400/food/5/', //Can find other placeholder image
+    location: {
+        description: 'Camberwell, VIC 3124', // change this: suburb name, state, postcode
+        position: {lat: -37.831369, lng: 145.057717}, // change these, right-click "What's here?" in google maps for coordinates
+        map: 'foodMap'
+    }
+},
