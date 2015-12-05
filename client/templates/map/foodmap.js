@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 
 Template.foodmap.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
-  GoogleMaps.ready('exampleMap', function(map) {
+  GoogleMaps.ready('foodMap', function(map) {
     // Add a marker to the map once it's ready
     var marker = new google.maps.Marker({
       position: map.options.center,
@@ -16,13 +16,13 @@ Template.foodmap.onCreated(function() {
 });
 
 Template.foodmap.helpers({
-  exampleMapOptions: function() {
+  foodMapOptions: function() {
     // Make sure the maps API has loaded
     if (GoogleMaps.loaded()) {
       // Map initialization options
       return {
-        center: new google.maps.LatLng(-37.8136, 144.9631),
-        zoom: 8
+        center: new google.maps.LatLng(-37.831009, 145.053919),
+        zoom: 16
       };
     }
   }
