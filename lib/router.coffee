@@ -26,7 +26,7 @@ FlowRouter.route '/userProfile',
       content: 'userprofile'
 
 
-FlowRouter.route '/itemDescription',
-  action: ->
+FlowRouter.route '/itemDescription/:listingId',
+  action: (params) ->
     BlazeLayout.render 'main',
       content: 'itemDescription'

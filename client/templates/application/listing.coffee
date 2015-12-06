@@ -6,21 +6,20 @@ listing1 =
     location: 'Albion St, Brunswick 3057'
     items: ['Tomatoes', 'Broccoli']
 
+listingId = ->
+  FlowRouter.getParam 'listingId'
+
 listing = ->
-  lId = FlowRouter.getParam "listingId"
-  person = Listings.findOne
-    _id: lId
+  Listings.findOne
+    _id: listingId()
 
 helpers =
-  listingId: ->
-    FlowRouter.getParam "listingId"
-  listing: ->
-    listing()
+  listingId: listingId
+  listing: listing
   person: ->
-    l = listing()
-    person = Meteor.users.findOne
-      _id: l.creatorId
-    person
+    Meteor.users.findOne
+      _id: listing().creatorId
 
 Template.listing.helpers helpers
 Template.listingSummary.helpers helpers
+Template.itemDescription.helpers helpers
