@@ -12,6 +12,7 @@
 
 .thumbnail {
     padding: 0;
+    border: 0px;
 }
 
 .thumbnail .caption-full {

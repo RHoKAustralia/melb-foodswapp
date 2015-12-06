@@ -2,63 +2,67 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-3 profileTab">
-        <center>
-
-          <div class="avatar">
-            <img alt="" src="http://lorempixel.com/120/120/people/{{person.profile.img}}">
-          </div>
-          <div class="info">
-            <div class="title">
-              <a target="_blank" href="">{{person.profile.firstName}}</a>
+          <div class="col-md-3">
+            <div class="panel panel-default profileTab">
+              <div class="panel-body">
+                <center>
+                  <div class="avatar">
+                    <img alt="" src="http://lorempixel.com/120/120/people/{{person.profile.img}}">
+                  </div>
+                  <div class="info">
+                    <div class="title">
+                      <a target="_blank" href="">{{person.profile.firstName}}</a>
+                    </div>
+                    <div>{{person.profile.bio}}</div>
+                  </div>
+                  <div class="bottom">
+                    <p>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                  </div>
+                  <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-envelope" style="vertical-align:middle"></span> Chat Now
+                  </button>
+                </center>
+              </div>
             </div>
-            <div class="desc">{{person.profile.bio}}</div>
           </div>
-          <div class="bottom">
-            <p>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-          </div>
-          <button class="btn btn-success">
-            <span class="glyphicon glyphicon-envelope" style="vertical-align:middle"></span> Chat Now
-          </button>
-        </center>
-      </div>
 
       <div class="col-md-9">
-        <div class="thumbnail">
-          <img class="img-responsive" src="{{listing.image}}" alt="">
-          <!-- https://s3-ap-southeast-1.amazonaws.com/hungryforever/wp-content/uploads/2014/10/vegetable-stir-fry-recipe-featured-image.jpg -->
-          <div class="caption-full">
-            <h4 class="pull-right">$24.99</h4>
-            <h4><a href="#">{{listing.title}}</a></h4>
-            <p>{{listing.description}}</p>
-          </div>
-          <div class="ratings">
-            <p class="pull-right">3 reviews</p>
-            <p>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star-empty"></span>
-              4.0 stars
-            </p>
-          </div>
-          <center>
-            <div>
-              <a class="btn btn-success">Swap</a>
-              <a class="btn btn-info">Sell</a>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="thumbnail">
+              <img class="img-responsive" src="{{listing.image}}" alt="">
+              <div class="caption-full">
+                <h4 class="pull-right">$24.99</h4>
+                <h4><a href="#">{{listing.title}}</a></h4>
+                <p>{{listing.description}}</p>
+              </div>
+              <div class="ratings">
+                <p class="pull-right">3 reviews</p>
+                <p>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                  4.0 stars
+                </p>
+              </div>
+              <center>
+                <div>
+                  <a class="btn btn-success">Swap</a>
+                  <a class="btn btn-info">Sell</a>
+                </div>
+              </center>
             </div>
-          </center>
+          </div>
         </div>
-
       </div>
-
     </div>
 
   </div>
