@@ -7,8 +7,8 @@ FlowRouter.route '/post',
     BlazeLayout.render 'main',
       content: 'postListing'
 
-FlowRouter.route '/map',
-  action: ->
+FlowRouter.route '/map/:listingId?',
+  action: (params) ->
     BlazeLayout.render 'foodmap'
 
 FlowRouter.route '/listing/:listingId',

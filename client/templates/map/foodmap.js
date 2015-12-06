@@ -4,6 +4,31 @@ if (Meteor.isClient) {
   });
 }
 
+var infowindow;
+
+function createInfoWindow() {
+  return new google.maps.InfoWindow({
+    content: Blaze.toHTML(Template.listingSummary).toString()
+  });
+};
+
+var createMarker = function(map, listing){
+  var marker = new google.maps.Marker({
+    position: listing.location.position,
+    map: map.instance
+  });
+
+  marker.addListener('click', function() {
+    FlowRouter.setParams({listingId: listing._id});
+    if (infowindow){
+      infowindow.close()
+    }
+    
+    infowindow = createInfoWindow()
+    infowindow.open(map.instance, marker);
+  });
+}
+
 Template.foodmap.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready('foodMap', function(map) {
@@ -11,12 +36,7 @@ Template.foodmap.onCreated(function() {
     var listings = Listings.find().fetch();
 
     for (listing in listings){
-      var l = listings[listing];
-
-      new google.maps.Marker({
-        position: l.location.position,
-        map: map.instance
-      });
+      createMarker(map ,listings[listing])
     };
   });
 });
