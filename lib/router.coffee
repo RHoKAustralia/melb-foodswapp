@@ -24,3 +24,9 @@ FlowRouter.route '/userProfile',
   action: ->
     BlazeLayout.render 'main',
       content: 'userprofile'
+
+
+FlowRouter.route '/itemDescription',
+  action: ->
+    BlazeLayout.render 'main',
+      content: 'itemDescription'

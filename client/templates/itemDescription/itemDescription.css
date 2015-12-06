@@ -1,0 +1,37 @@
+
+.thumbnail img {
+    width: 100%;
+    height: 300px;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+.profileTab{
+	background-color: rgb(243,243,243');
+}
+
+.desc{
+	text-align: left;
+}
+
+.btn-sell{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.btn-swap{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
