@@ -1,22 +1,24 @@
 <template name="listingSummary">
   <div class="listing-summary">
-    <div class="media">
-      <div class="media-left">
-        <img class="media-object img-circle" src="http://lorempixel.com/60/60/people/" alt="...">
-        <center><h5>{{person.profile.firstName}}</h5></center>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading">{{listing.title}}</h3>
-        <div class="listing-location">
-          <span class="glyphicon glyphicon-map-marker"></span>
-          {{listing.location.description}}
+    <a href="/{{postListingURL}}">
+      <div class="media">
+        <div class="media-left">
+          <img class="media-object img-circle" src="http://lorempixel.com/60/60/people/" alt="...">
+          <center><h5>{{person.profile.firstName}}</h5></center>
         </div>
-        <div class="listing-tags">
-          {{#each listing.items}}
-            <span class="label label-default">{{this}}</span>
-          {{/each}}
+        <div class="media-body">
+          <h3 class="media-heading">{{listing.title}}</h3>
+          <div class="listing-location">
+            <span class="glyphicon glyphicon-map-marker"></span>
+            {{listing.location.description}}
+          </div>
+          <div class="listing-tags">
+            {{#each listing.items}}
+              <span class="label label-default">{{this}}</span>
+            {{/each}}
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </template>

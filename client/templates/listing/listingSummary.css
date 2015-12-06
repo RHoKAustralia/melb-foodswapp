@@ -8,3 +8,12 @@
 .listing-summary {
   width: 30rem;
 }
+
+.listing-summary *:hover {
+  text-decoration: none;
+}
+
+.listing-summary * {
+  text-decoration: none;
+  color: black;
+}

@@ -17,8 +17,17 @@ helpers =
   listingId: listingId
   listing: listing
   person: ->
+<<<<<<< HEAD
     Meteor.users.findOne
       _id: listing().creatorId
+=======
+    l = listing()
+    person = Meteor.users.findOne
+      _id: l.creatorId
+    person
+  postListingURL: ->
+    FlowRouter.path('postListing', {listingId: listing._id})
+>>>>>>> Linking stuff to things
 
 Template.listing.helpers helpers
 Template.listingSummary.helpers helpers
