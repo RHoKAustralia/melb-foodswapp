@@ -44,7 +44,6 @@ Template.foodmap.onCreated(function() {
     var eventListings = Listings.find({type: "event"}).fetch();
 
     for (listing in eventListings){
-      console.log("RUNNING");
       var iconURL = "http://maps.google.com/mapfiles/marker_purple.png"
       createMarker(map ,eventListings[listing], iconURL)
     };
