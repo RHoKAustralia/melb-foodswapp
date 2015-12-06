@@ -12,10 +12,11 @@ function createInfoWindow() {
   });
 };
 
-var createMarker = function(map, listing){
+var createMarker = function(map, listing, iconURL){
   var marker = new google.maps.Marker({
     position: listing.location.position,
-    map: map.instance
+    map: map.instance,
+    icon: iconURL
   });
 
   marker.addListener('click', function() {
@@ -23,7 +24,7 @@ var createMarker = function(map, listing){
     if (infowindow){
       infowindow.close()
     }
-    
+
     infowindow = createInfoWindow()
     infowindow.open(map.instance, marker);
   });
@@ -33,11 +34,21 @@ Template.foodmap.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready('foodMap', function(map) {
     // Create markers for listings
-    var listings = Listings.find().fetch();
+    var exchangeListings = Listings.find({type: "exchange"}).fetch();
 
-    for (listing in listings){
-      createMarker(map ,listings[listing])
+    for (listing in exchangeListings){
+      var iconURL = "http://maps.google.com/mapfiles/marker.png"
+      createMarker(map ,exchangeListings[listing], iconURL)
     };
+
+    var eventListings = Listings.find({type: "event"}).fetch();
+
+    for (listing in eventListings){
+      console.log("RUNNING");
+      var iconURL = "http://maps.google.com/mapfiles/marker_purple.png"
+      createMarker(map ,eventListings[listing], iconURL)
+    };
+
   });
 });
 
@@ -47,8 +58,8 @@ Template.foodmap.helpers({
     if (GoogleMaps.loaded()) {
       // Map initialization options
       return {
-        center: new google.maps.LatLng(-37.831097, 145.054197),
-        zoom: 16
+        center: new google.maps.LatLng(-37.8306117,145.0728293),
+        zoom: 15
       };
     }
   }

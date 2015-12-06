@@ -25,6 +25,7 @@ if (Meteor.users.find().count() === 0) {
     var listingData = [
     {
         creatorId: sueId,
+        type: 'exchange',
         title: 'Buy my veggies', // change this
         image: 'http://lorempixel.com/400/400/food/5/', //Can find other placeholder image
         location: {
@@ -35,6 +36,7 @@ if (Meteor.users.find().count() === 0) {
     },
     {
        creatorId: sueId,
+       type: 'exchange',
        title: 'The best and juiciest oranges',
        image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTZ8rsO9dXeCtd1A4AuobE0RgwFqYSQGcDFbqeL_wQUbQ0LOxIm',
        location: {
@@ -45,6 +47,7 @@ if (Meteor.users.find().count() === 0) {
     },
     {
        creatorId: sueId,
+       type: 'exchange',
        title: 'The best and juiciest oranges',
        image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTZ8rsO9dXeCtd1A4AuobE0RgwFqYSQGcDFbqeL_wQUbQ0LOxIm',
        location: {
@@ -55,6 +58,7 @@ if (Meteor.users.find().count() === 0) {
     },
     {
        creatorId: sueId,
+       type: 'exchange',
        title: 'Want to swap tomatoes for anything',
        image: 'http://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/images/tomato-tips-380-1.jpg',
        location: {
@@ -65,6 +69,7 @@ if (Meteor.users.find().count() === 0) {
     },
     {
        creatorId: sueId,
+       type: 'exchange',
        title: 'Herbs up for grab',
        image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRWnhyuLhkHOVJj1Lpgqrc8XQ_87ZtYg63j4WjRcIfihFVXLcVO',
        location: {
@@ -75,7 +80,19 @@ if (Meteor.users.find().count() === 0) {
     },
     {
        creatorId: sueId,
+       type: 'exchange',
        title: 'Looking for bananas!',
+       image: 'https://i.ytimg.com/vi/rZrO6x-sLpY/maxresdefault.jpg',
+       location: {
+           description: 'Camberwell, VIC 3124',
+           position: {lat: -37.834587, lng: 145.063924},
+           map: 'foodMap'
+       }
+    },
+    {
+       creatorId: bobId,
+       type: 'event',
+       title: 'Popup Farmers Market',
        image: 'https://i.ytimg.com/vi/rZrO6x-sLpY/maxresdefault.jpg',
        location: {
            description: 'Camberwell, VIC 3124',
