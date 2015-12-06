@@ -23,7 +23,8 @@ body {
 }
 
 .brand-logo {
-  background-color: gray;
+  background-image: url('http://tffchallenge-production.s3.amazonaws.com/media/teams/29d57ea6-7391-11e4-85f8-12313f07090f.square.png');
+  background-size: contain;
   width: 25rem;
   height: 25rem;
   margin: 6rem auto;
